@@ -1,0 +1,21 @@
+.star-rating{list-style:none;margin:0;padding:0;width:90px;height:18px;position:relative;background:url(/web/20110409210140im_/http://domo.goanimate.com/static/go/img/v2/star_rating.gif) top left repeat-x;border:0;}.star-rating li{padding:0;margin:0;/*\*/ float:left;/* */;}.star-rating li a{display:block;width:18px;height:18px;text-decoration:none;text-indent:-9000px;z-index:20;position:absolute;padding:0;}.star-rating li a:hover{background:url(/web/20110409210140im_/http://domo.goanimate.com/static/go/img/v2/star_rating.gif) left center;z-index:2;left:0;border:none;}.star-rating a.one-star{-moz-outline:none;left:0;}.star-rating a.one-star:hover{width:18px;}.star-rating a.two-stars{-moz-outline:none;left:18px;}.star-rating a.two-stars:hover{width:36px;}.star-rating a.three-stars{-moz-outline:none;left:36px;}.star-rating a.three-stars:hover{width:54px;}.star-rating a.four-stars{-moz-outline:none;left:54px;}.star-rating a.four-stars:hover{width:72px;}.star-rating a.five-stars{-moz-outline:none;left:72px;}.star-rating a.five-stars:hover{width:90px;}.star-rating li.current-rating{background:url(/web/20110409210140im_/http://domo.goanimate.com/static/go/img/v2/star_rating.gif) left bottom;position:absolute;height:18px;display:block;text-indent:-9000px;z-index:1;}.star-rating-s{list-style:none;margin:0;padding:0;width:80px;height:16px;position:relative;background:url(/web/20110409210140im_/http://domo.goanimate.com/static/go/img/v2/star_rating_s.gif) top left repeat-x;border:0;}.star-rating-s li{padding:0;margin:0;/*\*/ float:left;/* */;}.star-rating-s li.current-rating{background:url(/web/20110409210140im_/http://domo.goanimate.com/static/go/img/v2/star_rating_s.gif) left bottom;position:absolute;height:16px;display:block;text-indent:-9000px;z-index:1;}
+/*
+     FILE ARCHIVED ON 21:01:40 Apr 09, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 07:14:46 Mar 19, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 108.387
+  exclusion.robots: 0.127
+  exclusion.robots.policy: 0.112
+  cdx.remote: 0.093
+  esindex: 0.012
+  LoadShardBlock: 75.267 (3)
+  PetaboxLoader3.datanode: 220.531 (5)
+  load_resource: 273.912 (2)
+  PetaboxLoader3.resolve: 94.092 (2)
+*/

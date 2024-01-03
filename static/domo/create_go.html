@@ -1,0 +1,292 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   <title>Domo Animate - Create Slideshows, eMessages and Animations</title>
+<meta name="description" content="Domo Animate, Powered by GoAnimate, is a way to easily create Domo animations and slideshows."/>
+<meta name="keywords" content="Animation, eCard, flash free, web 2.0, cartoon, comics, create animations free"/>
+<script type="text/javascript" src="/static/go/js/prototype.js"></script>
+<!--script src="http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.1/scriptaculous.js" type="text/javascript"></script-->
+<script src="https://replit.com/public/js/repl-auth-v2.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript"><!--
+var I18N = (function() {
+	var _msgs;
+	return {
+		setMessages : function(msgs) {
+			if (typeof msgs == 'object' && msgs != null)
+				_msgs = msgs;
+			else
+				throw "Invalid object given";
+		},
+		txt : function(key, defaultmsg) {
+			return (typeof _msgs['domo' + '_' + key] == 'undefined' ? defaultmsg : _msgs['domo' + '_' + key]);
+		}
+	};
+})();
+
+I18N.setMessages({});
+// --></script>
+<script src="/static/go/js/Gettext.js"></script>
+<script type="text/javascript" src="/static/go/po/goserver_js-en_US.json"></script>
+<script type="text/javascript"><!--
+var I18N_LANG = 'en_US';
+var GT = new Gettext({'locale_data': json_locale_data});
+// --></script>
+<script type="text/javascript">var srv_tz_os = -4;</script>
+<script src="/static/domo/js/init.js"></script>
+<script src="/static/go/js/go2.js"></script>
+<script src="/static/go/js/overlay.js"></script>
+<link href="/static/go/css/overlay.css" rel="stylesheet" type="text/css"/>
+<script src="/static/go/js/jquery/jquery-1.3.1.min.js"></script>
+<script>
+        jQuery.getJSON('/ajax/userInfo', (user) => {
+                if (user) {
+                        document.getElementById('login-button').innerHTML = user.name;
+                        jQuery('#loginform').hide();
+                }
+        });
+</script>
+<script src="/static/go/js/swfobject.js"></script>
+<link href="/static/domo/css/global.css" rel="stylesheet" type="text/css"/>
+<link href="/static/domo/css/create.css" rel="stylesheet" type="text/css"/>
+<link href="/static/domo/css/overlay.css" rel="stylesheet" type="text/css"/>
+<script defer type="text/javascript" src="/static/go/js/pngfix.js"></script>
+
+<link rel="alternate" href="./mostwatched.rss" type="application/rss+xml" title="Domo - Most Watched">
+
+</head>
+<body onresize="reloadNowGlobal();">
+ 
+
+<!-- PAGE STRUCTURE -->
+<div class="container">
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">
+        	        	<a href="/"></a>
+        	        </div>
+        
+        <div class="globalnav">
+	    
+	    <div style="float:right">
+                <a id="login-button" href="javascript:showLogin(250);" class="gnavitem_r" style="color:white">Login</a>
+						<img src="/static/go/img/v2/gray_short_line_graybar.gif" style="float:left;padding-top:10px;"/>
+                <a href="/forums" class="gnavitem_r" style="color:white">Forum</a>
+		<img src="/static/go/img/v2/gray_short_line_graybar.gif" style="float:left;padding-top:10px;"/>
+                <a href="/searchresults" class="gnavitem_r" style="color:white">Search</a>
+		<img src="/static/go/img/v2/gray_short_line_graybar.gif" style="float:left;padding-top:10px;"/>
+                <a href="/faq" class="gnavitem_r" style="color:white">Help</a>
+	    </div>
+        </div>
+        
+	
+	<!-- Top menu Ends -->
+	<a name="skipmenu"></a>
+
+
+    </div>
+    <div class="main_nav">
+	<div class="nav_item"><a class="watch" href="./list.html"></a></div>
+	<div class="nav_item"><img src="/static/domo/img/common/div_nav.gif?v=456"></div>
+	<div class="nav_item"><a class="create" href="./create.html"></a></div>
+	<div class="nav_item"><img src="/static/domo/img/common/div_nav.gif?v=456"></div>
+	<div class="nav_rspace"></div>
+	<div class="poweredby"></div>
+    </div>
+	<!-- END OF HEADER -->
+    <!-- MAIN CONTENT -->
+    <div class="frame">
+    <div class="content">
+    <div id="feedback_block">
+            <div id="feedback" align="center" class="error">
+    		    The domo animate create page is currently in beta right now. Please expect this to not work correctly.	    </div>
+    </div>
+	<!-- END OF HEADER -->
+            <span id="cookieErr"></span>
+<script type="text/javascript">
+function ssChooseTemplate(tid) {
+    if (typeof pageTracker != 'undefined' && pageTracker)
+	pageTracker._trackPageview("/pageTracker/slideshow/chooseTemplate/" + tid);
+    window.location = "/go/slideshow/" + tid;
+}
+</script>
+<div class="animate_now_area" style="height: 600px;position:relative;">
+    <div id="slideshowDiv">
+    <h1 style="color: white; font-size: 2em;">Domo Slideshows</h1>
+    <p style="color: #56760f">Import your pictures, select a nice song to accompany the slideshow and you are done! Your pictures will be the hero of your own personalized Domo adventure.</p>
+    <table style="width: 550px; margin-top: 2em">
+    <tr>
+    <td align="center" style="color: white; font-size: 1.3em; padding-top: 0.5em; padding-bottom: 0.3em; font-weight: bold;">Domo TV Slideshow</td>
+    <td align="center" style="color: white; font-size: 1.3em; padding-top: 0.5em; padding-bottom: 0.3em; font-weight: bold;">Domo Random Slideshow</td>
+    </tr>
+    <tr>
+    <td align="center"><img src="/static/domo/img/create/img_domotv.gif"/></td>
+    <td align="center"><img src="/static/domo/img/create/img_domorandom.gif"/></td>
+    </tr>
+    <tr>
+    <td align="center"><div class="preview_button" onclick="javascript:showPreviewOverlay('0xmy3dburWwM', 'Domo Theme Demo', 80)"></div></td>
+    <td align="center"><div class="preview_button" onclick="javascript:showPreviewOverlay('02QYEtaHdeJo', 'Domo Random Demo', 80)"></div></td>
+    </tr>
+    <tr>
+    <td colspan="2" align="center"><div style="padding-top:8px"><a href="/faq#tutorial1">Watch Tutorial</a></div></td>
+    </tr>
+    </table>
+    </div>
+
+    <div id="createAnimationStudioDiv">
+<h1 style="color: #51729b">Domo Animation Studio</h1>
+<p style="color: white">Create your own Domo adventures in minutes with our easy-to-use animation studio.</p>
+<img src="/static/domo/img/create/img_studio.gif"/>
+    <center><div class="create_button" onclick="javascript:window.location='../domo.html'"></div><div style="padding-top:15px;"><a href="/faq#tutorial2">Watch Tutorial</a></div></center>
+</div>
+</div>
+    </div>
+	<div class="footerimg"><img src="/static/domo/img/common/footer.gif"/></div>
+    </div>
+    <!-- END OF MAIN CONTENT -->
+
+    <!-- FOOTER -->
+<div class="footer">
+    <div class="footercopyright">Domo &copy; NHK-TYO; animation &copy; DPC</div>
+    <div class="footerlink"><a href="/termsofuse" style="font-weight:normal">Terms of Use</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/forums">Forum</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/faq">Help</a></div>
+</div>
+    <!-- END OF FOOTER -->
+
+</div>
+<!-- END OF PAGE STRUCTURE -->
+<!-- flex framework -->
+<div>
+	<object width="1" height="1" <param name="MOVIE" value="/static/libs/Framework_Container.swf">
+		<param name="QUALITY" value="low">
+		<param name="SCALE" value="noborder">
+		<param name="wmode" value="transparent">
+		<embed src="/static/libs/Framework_Container.swf" wmode="transparent" width="1" height="1" quality="low" < embed>
+	</object>	
+</div>
+
+<div id="darkenScreenObject" style="display:none;">
+</div>
+	<div style="display: none; position: absolute; margin-top: 0px; height: 355px; width: 550px; left: 230px; top: 0px; background: none; z-index: 50;" id="overlayObjectGlobal">
+<div id="overlayAlertBox" style="display:none; position: absolute;">
+   <div id="overlayAlertBoxTitle"><span id="overlayAlertBoxTitle"></span></div>
+   <div id="overlay_close" onclick="javascript:hideAlertBox();">&nbsp;</div>
+   <div class="overlaybody" style="text-align: left;float:left; padding: 10px 15px;">
+	<span id="alertBoxMessage"></span><br>
+	<div id="overlayAlertBoxBtn"><input type="button" value="  OK  " onclick="javascript:hideAlertBox();"></div>
+   </div>
+</div><div id="overlayHTMLBox" style="display:none; position: absolute;">
+   <div id="overlayHTMLBoxTitle"><span id="overlayHTMLBoxTitle"></span></div>
+   <div id="overlayHTML_close" onclick="javascript:hideHTMLBox();">&nbsp;</div>
+   <div class="overlaybody" style="text-align: left;float:left; padding: 10px 15px;clear:both;width:470px;">
+	<span id="HTMLBoxMessage"></span>
+   </div>
+   <div id="HTMLBoxTP" style="display:none"></div>
+</div>    <div id="overlayGeneral" style="display:none;width:700px;position:relative;">
+	<div class="overlay_header"><img src="/static/domo/img/overlay/img_popup_top_700.png?v=456" height="37" width="700" onload="javascript:iePngFix(this,700,37)"></div>
+        <div style="float:left; margin:0px; padding: 0px; width:700px;">
+            <div style="float:left; margin:0px; padding: 0px; width:700px;">
+		<span id="tracker_id" style="display:none"></span>
+                <div class="overlay_header_title"><span id="OG_title"></span></div>
+                <div class="overlayClose" id="OG_close_btn"><a href="javascript:goVoid();" onclick="javascript:hideOG();"></a></div>
+                <div style="background-color:#fff; position:relative;float:left;width:700px;">
+		    <span id="OG_content"></div>
+                </div>
+                <div class="overlay_footer"><img src="/static/domo/img/overlay/img_popup_bottom_700.png?v=456" height="30" width="700" onload="javascript:iePngFix(this,700,30)"></div>
+            </div>
+        </div>
+    </div></div><div style="display: none; position: absolute; margin-top: 0px; height: 355px; width: 550px; left: 365px; top: 0px; background: none;" id="overlayObject">
+<div id="overlaySSPreviewBox" style="display:none; position: absolute;">
+   <div id="overlaySSPreviewBoxTitle"><span id="overlaySSPreviewBoxTitle"></span></div>
+   <div id="overlay_close" onclick="javascript:ssHidePreviewOverlay();">&nbsp;</div>
+   <div class="overlaybody" style="text-align: left;float:left; padding: 10px 15px;">
+   <iframe id="ss-home-preview-demo" src="./create.html" smartsize="true" frameborder="false" scrolling="no" height="360" width="548" style="border: 0px;z-index:100;"></iframe>
+   <div class="ss-home-preview-btn">
+      <div class="ss-home-usethisbtn" style="display:none"><a id="ss-home-usethisbtn-a" href="javascript:goVoid();" onclick=""></a></div>
+      <div class="ss-home-signupbtn"><a href="javascript:goVoid();" onclick="javascript:ssHidePreviewOverlay();showSignup(250);"></a></div>
+   </div>
+   </div>
+</div></div>
+<div style="display: none; position: absolute; height: 450px; width: 500x; left: 365px; top: 125px; background: none; z-index: 50" id="overlayObject2">
+    <div id="overlayLogin" style="display:none;">
+
+                <div style="float:left; margin:90px 0px 0px 0px; padding: 0px 0px 0px 0px; height:180px; width:400px;">
+            <div style="float:left; margin:0px; padding: 0px; height:180px; width:400px;">
+                
+                <div style="margin:7px 7px 7px 0px;height:172px; background-color:#afcfe4; position:relative;">
+                    <div style="float:left; margin:0px; padding: 0px; height:113px; width:85px; position:absolute; top:35px; left:15px;">
+                        <img src="/static/domo/img/common/img_domo.png" width="85" height="113" onload="javascript:iePngFix(this,85,113);"></img><span id="site_login_button"></span><span id="site_login_button_dis"></span>
+                    </div>
+                    <div class="overlayLoginSignupClose"><a href="javascript:hideLogin();on_signup_or_login_cancel_handler();"><img src="/static/domo/img/common/btn_close.png" width="28" height="28" onload="javascript:iePngFix(this,28,28);"></img></a></div>
+                    <form id="loginform" name="loginform" method="post" action="/ajax/account/staff/login">
+                        <div style="font-weight:bold;position:absolute;top:17px;left:115px;">Login</div>
+                        <div id="loginErr" style="position:absolute;color:red;left:115px;top:35px;width:250px;">&nbsp;</div>
+                    
+                        <input type="hidden" value="/static/domo/create.html" name="returnto"> 
+                        <div class="label" style="width:60px;text-align:left;float:left;position:absolute;top:74px;left:115px;">disTag</div>
+                        <div class="field" style="width:180px;float:left;position:absolute;top:70px;left:188px;"><input id="siteLoginBox" style="WIDTH: 180px" maxlength="255" name="discord_tag"></div>
+                        <div class="label" style="width:60px;text-align:left;float:left;position:absolute;top:105px;left:115px;">Password</div>
+                        <div class="field" style="width:180px;float:left;position:absolute;top:100px;left:188px;"><input style="WIDTH: 180px" type="password" maxlength="50" name="psw"></div>
+                        <div class="label"></div>
+                        <div class="field" style="float:left;width:80px;position:absolute;top:130px;left:188px;"><input class="btn_sty" type="submit" value="Login" name="submit" id="login_submit"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/\
+javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2516970-11");
+pageTracker._initData();
+//pageTracker._setCampSrcKey("domo.goanimate.com");
+var userDefinedValue = 'logged-out';
+if(!utmvCookieCheck(userDefinedValue)) {
+	pageTracker._setVar(userDefinedValue);
+}
+pageTracker._trackPageview();
+</script>
+
+<!-- Start Quantcast tag --> <script type="text/javascript"> _qoptions={ qacct:"p-df3Qdl67yh4O6" }; </script> <script type="text/javascript" src="https://web.archive.org/web/20111012043825js_/http://edge.quantserve.com/quant.js"></script> <noscript> <img src="https://web.archive.org/web/20111012043825im_/http://pixel.quantserve.com/pixel/p-df3Qdl67yh4O6.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/> </noscript> <!-- End Quantcast tag -->
+<!-- Start Quantcast tag -->
+<script type="text/javascript">
+_qoptions={
+qacct:"p-66CFnJxwubvnE"
+};
+</script>
+<script type="text/javascript" src="https://web.archive.org/web/20111012043825js_/http://edge.quantserve.com/quant.js"></script>
+<noscript>
+<img src="https://web.archive.org/web/20111012043825im_/http://pixel.quantserve.com/pixel/p-66CFnJxwubvnE.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+</noscript>
+<!-- End Quantcast tag -->
+<script type="text/javascript">
+</script>
+</body>
+</html>
+<!--
+     FILE ARCHIVED ON 15:21:49 Oct 11, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 04:03:17 Feb 24, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 88.342 (11)
+  exclusion.robots: 0.176
+  exclusion.robots.policy: 0.167
+  RedisCDXSource: 3.963
+  esindex: 0.007
+  LoadShardBlock: 66.711 (3)
+  PetaboxLoader3.datanode: 99.847 (4)
+  load_resource: 229.057
+  PetaboxLoader3.resolve: 94.291
+-->

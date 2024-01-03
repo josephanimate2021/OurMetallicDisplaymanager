@@ -1,0 +1,76 @@
+/***
+this css has the general header/footer layout stuff
+***/
+
+@import url("https://gowdpk.joseph-animate.repl.co/html/modern-normalize.css");
+
+:root {
+	--primary: #d85e27;
+	--transition: .15s ease;
+}
+
+/**
+general
+**/
+html, body {
+	background: #ffffff;
+	color: #000000;
+	font: 16px/1.5 'Sailec', Arial, sans-serif;
+	width: 100%;
+	height: 100%;
+}
+html.dark, html.dark>body {
+	background-color: #000000;
+	color: #ffffff;
+}
+body {
+	display: flex; 
+	flex-direction: column;
+	overflow: hidden;
+}
+main {
+	padding: 20px 40px;
+	height: 100%;
+	overflow: auto;
+}
+
+/**
+font importing
+**/
+@font-face {
+	font-family: 'Sailec';
+	font-weight: 100;
+	src: url('https://gowdpk.joseph-animate.repl.co/html/Sailec-Thin.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Sailec';
+	font-weight: 200;
+	src: url('https://gowdpk.joseph-animate.repl.co/html/Sailec-Light.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Sailec';
+	font-weight: 400;
+	src: url('https://gowdpk.joseph-animate.repl.co/html/Sailec-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Sailec';
+	font-weight: 500;
+	src: url('https://gowdpk.joseph-animate.repl.co/html/Sailec-Medium.woff') format('woff');
+}
+
+/* font weight 500 and font weight 700 (bold) are the same for better integration support */
+@font-face {
+	font-family: 'Sailec';
+	font-weight: 700;
+	src: url('https://gowdpk.joseph-animate.repl.co/html/Sailec-Medium.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'GlyphiconsRegular';
+	src: url('https://gowdpk.joseph-animate.repl.co/html/glyphicons-regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}

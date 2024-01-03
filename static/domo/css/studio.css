@@ -1,0 +1,15 @@
+div.content {
+        width: 960px;
+        margin: 0;
+        background-color:#62422b;
+}
+div.studiotop {
+        width: 960px;
+        height: 14px;
+        background: url(../img/studio/img_top.gif) no-repeat 0 0;
+}
+div.studiobottom {
+        width: 960px;
+        height: 14px;
+        background: url(../img/studio/img_bottom.gif) no-repeat 0 0;
+}
